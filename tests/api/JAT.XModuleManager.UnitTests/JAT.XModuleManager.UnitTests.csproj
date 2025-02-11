@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\api\JAT.XModuleManager.Application\JAT.XModuleManager.Application.csproj" />
+    <ProjectReference Include="..\..\..\src\api\JAT.XModuleManager.Application\JAT.XModuleManager.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
