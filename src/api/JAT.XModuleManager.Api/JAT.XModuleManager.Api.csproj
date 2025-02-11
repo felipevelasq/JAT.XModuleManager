@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JAT.XModuleManager.Application\JAT.XModuleManager.Application.csproj" />
+    <ProjectReference Include="..\JAT.XModuleManager.Infrastructure\JAT.XModuleManager.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
