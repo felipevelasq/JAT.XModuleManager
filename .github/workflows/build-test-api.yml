@@ -3,9 +3,6 @@ name: Build and Test API
 on:
   pull_request:
     types: [opened, synchronize]
-    paths:
-      - 'src/api/**'
-      - 'tests/api/**'
 
 jobs:
   build-and-test-api:
