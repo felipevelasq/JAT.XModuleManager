@@ -5,7 +5,9 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  build-and-test-api:    
+  build-and-test-api:
+    name: Build and Test API
+    
     runs-on: ubuntu-latest
 
     steps:
