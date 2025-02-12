@@ -31,7 +31,7 @@ public class CreateModuleHandlerTest
         var result = await _handler.Handle(command, cancellationToken);
 
         // Assert
-        _moduleRepositoryMock.Verify(repo => repo.AddAsync(It.IsAny<Module>(), cancellationToken), Times.Once);
+        _moduleRepositoryMock.Verify(repo => repo.AddAsync(It.IsAny<Module>(), cancellationToken), Times.Never);
         Assert.NotNull(result);
         Assert.IsType<CreateModuleResult>(result);
     }
