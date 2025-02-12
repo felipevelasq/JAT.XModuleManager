@@ -8,9 +8,7 @@ on:
       - 'tests/api/**'
 
 jobs:
-  build-and-test-api:
-    name: Build and Test API
-    
+  build-and-test-api:    
     runs-on: ubuntu-latest
 
     steps:
