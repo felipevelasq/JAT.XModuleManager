@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'Create or destroy Azure API environment'
+        description: 'Create or destroy Azure API environment (use create or destroy)'
         required: true
         default: 'create'
 
@@ -18,7 +18,7 @@ env:
 jobs:
   setup-up-azure-resources:
     runs-on: ubuntu-latest
-    if: contains(${{ github.event.inputs.action }}, 'create')
+    if: ${{ github.event.inputs.action == 'create4'}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -50,9 +50,7 @@ jobs:
 
   destroy-azure-resources:
     runs-on: ubuntu-latest
-
-    if: contains(${{ github.event.inputs.action }}, 'destroy')
-
+    if:  ${{ github.event.inputs.action == 'destroy' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
