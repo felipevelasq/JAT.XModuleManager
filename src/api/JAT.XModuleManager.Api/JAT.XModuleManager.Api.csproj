@@ -15,9 +15,5 @@
     <ProjectReference Include="..\JAT.XModuleManager.Application\JAT.XModuleManager.Application.csproj" />
     <ProjectReference Include="..\JAT.XModuleManager.Infrastructure\JAT.XModuleManager.Infrastructure.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Update="Dockerfile">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+
 </Project>

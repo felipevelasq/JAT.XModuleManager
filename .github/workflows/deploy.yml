@@ -50,7 +50,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: XModuleManagerApi
-          path: public
+          path: src/api/JAT.XModuleManager.Api/bin/Release/net8.0
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -71,6 +71,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: src/api/JAT.XModuleManager.Api/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
