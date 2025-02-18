@@ -12,6 +12,7 @@ env:
   ###############################################
   DOCKER_IMAGE_NAME: felipevelasq-azure-ttt
   AZURE_WEBAPP_NAME: felipevelasq-ttt-app
+  LOWERCASE_REPOSITORY: ${{ github.repository }}
   ###############################################
 
 jobs:
@@ -81,6 +82,9 @@ jobs:
     needs: Build-Docker-Image
     name: Deploy app container to Azure
     steps:
+      - name: Set lowercase repository name
+        run: echo "LOWERCASE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
       - name: "Login via Azure CLI"
         uses: azure/login@v2
         with:
@@ -96,7 +100,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
-          images: ${{env.IMAGE_REGISTRY_URL}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{github.sha}}
+          images: ${{env.IMAGE_REGISTRY_URL}}/${{ env.LOWERCASE_REPOSITORY }}/${{env.DOCKER_IMAGE_NAME}}:${{github.sha}}
 
       - name: Azure logout via Azure CLI
         uses: azure/CLI@v2
