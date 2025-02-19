@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-test-api:
-    name: Build and Test Modules API
+    name: Build and Test
     
     runs-on: ubuntu-latest
 
