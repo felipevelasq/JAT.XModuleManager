@@ -1,0 +1,6 @@
+@JAT.Modules.Api_HostAddress = http://localhost:5210
+
+GET {{JAT.Modules.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
