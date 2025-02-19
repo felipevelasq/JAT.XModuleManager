@@ -2,7 +2,6 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 COPY . ./
-
 # Restore as distinct layers
 RUN dotnet restore ./JAT.Modules.Api/JAT.Modules.Api.csproj
 # Build and publish a release
