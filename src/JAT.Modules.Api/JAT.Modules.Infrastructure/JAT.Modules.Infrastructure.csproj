@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JAT.Modules.Application\JAT.Modules.Application.csproj" />
+    <ProjectReference Include="..\JAT.Modules.Domain\JAT.Modules.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

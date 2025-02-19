@@ -1,0 +1,32 @@
+name: Build and Test
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+
+jobs:
+  build-and-test-api:
+    name: Build and Test Modules API
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore JAT.XModuleManager.sln
+
+    - name: Build
+      run: dotnet build JAT.XModuleManager.sln --no-restore --configuration Release
+
+    - name: Test
+      run: dotnet test JAT.XModuleManager.sln --no-build --configuration Release --verbosity normal
