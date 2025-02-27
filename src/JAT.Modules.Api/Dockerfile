@@ -3,6 +3,7 @@ WORKDIR /app
 
 # Copy the Directory.Packages.props file from the root of the solution
 COPY Directory.Packages.props ./
+COPY Directory.Build.props ./
 
 COPY ./src/JAT.Modules.Api/ ./
 # Restore as distinct layers
