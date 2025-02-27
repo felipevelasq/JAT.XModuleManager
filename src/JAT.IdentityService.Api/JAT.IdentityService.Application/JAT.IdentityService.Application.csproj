@@ -3,7 +3,7 @@
     <PackageReference Include="MediatR" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JAT.Modules.Domain\JAT.Modules.Domain.csproj" />
+    <ProjectReference Include="..\JAT.IdentityService.Domain\JAT.IdentityService.Domain.csproj" />
   </ItemGroup>
 
 </Project>

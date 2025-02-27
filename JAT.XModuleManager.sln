@@ -21,11 +21,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JAT.Modules.Api", "JAT.Modu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.Modules.Application.UnitTests", "tests\JAT.Modules.Api\JAT.Modules.Application.UnitTests\JAT.Modules.Application.UnitTests.csproj", "{4C9C75F2-0CFD-45D3-B0A4-4186B61D74B3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JAT.IdentityService.Api", "JAT.IdentityService.Api", "{24EC4AC0-7D0A-5653-CC46-50216674C35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.IdentityService.Api", "src\JAT.IdentityService.Api\JAT.IdentityService.Api\JAT.IdentityService.Api.csproj", "{96F6A7EC-62EC-43F8-9036-A18115907517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.IdentityService.Application", "src\JAT.IdentityService.Api\JAT.IdentityService.Application\JAT.IdentityService.Application.csproj", "{FC1683B7-EABA-4969-BBCA-E92F7C8DB5E3}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{089100B1-113F-4E66-888A-E83F3999EAFD}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.IdentityService.Domain", "src\JAT.IdentityService.Api\JAT.IdentityService.Domain\JAT.IdentityService.Domain.csproj", "{9E8C4CAD-CF3A-463C-9B92-7151F83A0B46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.IdentityService.Infrastructure", "src\JAT.IdentityService.Api\JAT.IdentityService.Infrastructure\JAT.IdentityService.Infrastructure.csproj", "{924013BF-D084-41EF-A32A-54F17E93DD79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +63,22 @@ Global
 		{4C9C75F2-0CFD-45D3-B0A4-4186B61D74B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C9C75F2-0CFD-45D3-B0A4-4186B61D74B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C9C75F2-0CFD-45D3-B0A4-4186B61D74B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F6A7EC-62EC-43F8-9036-A18115907517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F6A7EC-62EC-43F8-9036-A18115907517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F6A7EC-62EC-43F8-9036-A18115907517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F6A7EC-62EC-43F8-9036-A18115907517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC1683B7-EABA-4969-BBCA-E92F7C8DB5E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1683B7-EABA-4969-BBCA-E92F7C8DB5E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1683B7-EABA-4969-BBCA-E92F7C8DB5E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1683B7-EABA-4969-BBCA-E92F7C8DB5E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8C4CAD-CF3A-463C-9B92-7151F83A0B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8C4CAD-CF3A-463C-9B92-7151F83A0B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8C4CAD-CF3A-463C-9B92-7151F83A0B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8C4CAD-CF3A-463C-9B92-7151F83A0B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924013BF-D084-41EF-A32A-54F17E93DD79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924013BF-D084-41EF-A32A-54F17E93DD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924013BF-D084-41EF-A32A-54F17E93DD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924013BF-D084-41EF-A32A-54F17E93DD79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +91,10 @@ Global
 		{14499D25-C3E1-45A4-817D-628647ABB51C} = {E448EA8C-5462-F579-4313-727F6F8B6483}
 		{44CAEA0D-8346-EF30-7D5E-9B3FFA5F9500} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{4C9C75F2-0CFD-45D3-B0A4-4186B61D74B3} = {44CAEA0D-8346-EF30-7D5E-9B3FFA5F9500}
+		{24EC4AC0-7D0A-5653-CC46-50216674C35B} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{96F6A7EC-62EC-43F8-9036-A18115907517} = {24EC4AC0-7D0A-5653-CC46-50216674C35B}
+		{FC1683B7-EABA-4969-BBCA-E92F7C8DB5E3} = {24EC4AC0-7D0A-5653-CC46-50216674C35B}
+		{9E8C4CAD-CF3A-463C-9B92-7151F83A0B46} = {24EC4AC0-7D0A-5653-CC46-50216674C35B}
+		{924013BF-D084-41EF-A32A-54F17E93DD79} = {24EC4AC0-7D0A-5653-CC46-50216674C35B}
 	EndGlobalSection
 EndGlobal
