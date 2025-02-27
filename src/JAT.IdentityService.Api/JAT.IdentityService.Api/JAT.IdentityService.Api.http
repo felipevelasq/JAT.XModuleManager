@@ -1,0 +1,6 @@
+@JAT.IdentityService.Api_HostAddress = http://localhost:5139
+
+GET {{JAT.IdentityService.Api_HostAddress}}/Login/
+Accept: application/json
+
+###

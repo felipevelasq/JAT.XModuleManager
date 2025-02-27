@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\JAT.IdentityService.Application\JAT.IdentityService.Application.csproj" />
+    <ProjectReference Include="..\JAT.IdentityService.Domain\JAT.IdentityService.Domain.csproj" />
+  </ItemGroup>
+</Project>
