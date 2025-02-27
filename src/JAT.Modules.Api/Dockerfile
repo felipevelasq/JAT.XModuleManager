@@ -1,7 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-COPY . ./
+# Copy the Directory.Packages.props file from the root of the solution
+COPY Directory.Packages.props ./
+
+COPY ./src/JAT.Modules.Api/ ./
 # Restore as distinct layers
 RUN dotnet restore ./JAT.Modules.Api/JAT.Modules.Api.csproj
 # Build and publish a release
