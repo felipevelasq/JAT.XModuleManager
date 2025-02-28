@@ -32,7 +32,7 @@ public class CreateModuleHandlerTest
 
         // Assert
         _moduleRepositoryMock.Verify(repo => repo.AddAsync(It.IsAny<Module>(), cancellationToken), Times.Once);
-        Assert.True(result.IsError);
+        Assert.False(result.IsError);
         Assert.NotNull(result.Value);
         Assert.IsType<CreateModuleResult>(result);
     }
