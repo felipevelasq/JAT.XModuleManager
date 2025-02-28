@@ -34,6 +34,6 @@ public class CreateModuleHandlerTest
         _moduleRepositoryMock.Verify(repo => repo.AddAsync(It.IsAny<Module>(), cancellationToken), Times.Once);
         Assert.False(result.IsError);
         Assert.NotNull(result.Value);
-        Assert.IsType<CreateModuleResult>(result);
+        Assert.IsType<CreateModuleResult>(result.Value);
     }
 }
