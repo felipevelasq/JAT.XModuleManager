@@ -3,7 +3,7 @@ using JAT.Modules.Domain;
 using JAT.Modules.Domain.Interfaces;
 using Moq;
 
-namespace JAT.Modules.UnitTests.Application.Modules.Create;
+namespace JAT.Modules.Application.UnitTests.Modules.Create;
 
 public class CreateModuleHandlerTest
 {
@@ -32,7 +32,8 @@ public class CreateModuleHandlerTest
 
         // Assert
         _moduleRepositoryMock.Verify(repo => repo.AddAsync(It.IsAny<Module>(), cancellationToken), Times.Once);
-        Assert.NotNull(result);
+        Assert.True(result.IsError);
+        Assert.NotNull(result.Value);
         Assert.IsType<CreateModuleResult>(result);
     }
 }
