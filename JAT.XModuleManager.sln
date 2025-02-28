@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.IdentityService.Domain"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.IdentityService.Infrastructure", "src\JAT.IdentityService.Api\JAT.IdentityService.Infrastructure\JAT.IdentityService.Infrastructure.csproj", "{924013BF-D084-41EF-A32A-54F17E93DD79}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C8E42992-5E42-0C2B-DBFE-AA848D06431C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.Core.Domain", "src\Shared\JAT.Core.Domain\JAT.Core.Domain.csproj", "{DCAB8DE2-DBD7-404F-950B-C9D3E4DF394F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +83,10 @@ Global
 		{924013BF-D084-41EF-A32A-54F17E93DD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{924013BF-D084-41EF-A32A-54F17E93DD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{924013BF-D084-41EF-A32A-54F17E93DD79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAB8DE2-DBD7-404F-950B-C9D3E4DF394F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAB8DE2-DBD7-404F-950B-C9D3E4DF394F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAB8DE2-DBD7-404F-950B-C9D3E4DF394F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAB8DE2-DBD7-404F-950B-C9D3E4DF394F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,5 +104,7 @@ Global
 		{FC1683B7-EABA-4969-BBCA-E92F7C8DB5E3} = {24EC4AC0-7D0A-5653-CC46-50216674C35B}
 		{9E8C4CAD-CF3A-463C-9B92-7151F83A0B46} = {24EC4AC0-7D0A-5653-CC46-50216674C35B}
 		{924013BF-D084-41EF-A32A-54F17E93DD79} = {24EC4AC0-7D0A-5653-CC46-50216674C35B}
+		{C8E42992-5E42-0C2B-DBFE-AA848D06431C} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{DCAB8DE2-DBD7-404F-950B-C9D3E4DF394F} = {C8E42992-5E42-0C2B-DBFE-AA848D06431C}
 	EndGlobalSection
 EndGlobal
