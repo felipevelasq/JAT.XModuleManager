@@ -1,10 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\JAT.Core.Api\JAT.Core.Api.csproj" />
     <ProjectReference Include="..\JAT.IdentityService.Application\JAT.IdentityService.Application.csproj" />
     <ProjectReference Include="..\JAT.IdentityService.Infrastructure\JAT.IdentityService.Infrastructure.csproj" />
   </ItemGroup>

@@ -3,4 +3,8 @@
     <ProjectReference Include="..\JAT.IdentityService.Application\JAT.IdentityService.Application.csproj" />
     <ProjectReference Include="..\JAT.IdentityService.Domain\JAT.IdentityService.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+  </ItemGroup>
 </Project>
