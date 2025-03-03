@@ -5,6 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\JAT.Core.Api\JAT.Core.Api.csproj" />
     <ProjectReference Include="..\JAT.Modules.Application\JAT.Modules.Application.csproj" />
     <ProjectReference Include="..\JAT.Modules.Infrastructure\JAT.Modules.Infrastructure.csproj" />
   </ItemGroup>

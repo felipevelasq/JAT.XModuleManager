@@ -1,8 +1,16 @@
+using JAT.IdentityService.Api;
+using JAT.IdentityService.Application;
+using JAT.IdentityService.Infrastructure;
+
 internal class Program
 {
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddApplicationServices()
+            .AddInfrastructureServices(builder.Configuration)
+            .AddMediatrConfigs();
 
         builder.Services.AddControllers();
         // Add services to the container.
@@ -13,6 +21,8 @@ internal class Program
         builder.Services.AddProblemDetails();
 
         var app = builder.Build();
+        
+        app.Services.ApplyContextUpdates();
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
