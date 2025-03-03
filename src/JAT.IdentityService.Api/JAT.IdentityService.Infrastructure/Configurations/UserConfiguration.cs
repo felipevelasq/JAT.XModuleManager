@@ -1,4 +1,5 @@
 using JAT.IdentityService.Domain;
+using JAT.IdentityService.Domain.Constants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -15,15 +16,15 @@ public sealed class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(x => x.Username)
             .IsRequired()
-            .HasMaxLength(50);
+            .HasMaxLength(MaxLengths.User.Username);
 
         builder.Property(x => x.Email)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(MaxLengths.User.Email);
 
         builder.Property(x => x.PasswordHash)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(MaxLengths.User.PasswordHash);
 
         builder.Property(x => x.CreatedAt)
             .IsRequired();

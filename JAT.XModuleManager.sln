@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.Core.Domain", "src\Shar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.Core.Api", "src\Shared\JAT.Core.Api\JAT.Core.Api.csproj", "{D1042E56-C3BC-42FB-98C2-910F6698A1DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JAT.Core.Application", "src\Shared\JAT.Core.Application\JAT.Core.Application.csproj", "{E3D9CEB3-F761-4547-9F67-663FDFFF0215}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{D1042E56-C3BC-42FB-98C2-910F6698A1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1042E56-C3BC-42FB-98C2-910F6698A1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1042E56-C3BC-42FB-98C2-910F6698A1DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3D9CEB3-F761-4547-9F67-663FDFFF0215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D9CEB3-F761-4547-9F67-663FDFFF0215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D9CEB3-F761-4547-9F67-663FDFFF0215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D9CEB3-F761-4547-9F67-663FDFFF0215}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,5 +119,6 @@ Global
 		{C8E42992-5E42-0C2B-DBFE-AA848D06431C} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{DCAB8DE2-DBD7-404F-950B-C9D3E4DF394F} = {C8E42992-5E42-0C2B-DBFE-AA848D06431C}
 		{D1042E56-C3BC-42FB-98C2-910F6698A1DD} = {C8E42992-5E42-0C2B-DBFE-AA848D06431C}
+		{E3D9CEB3-F761-4547-9F67-663FDFFF0215} = {C8E42992-5E42-0C2B-DBFE-AA848D06431C}
 	EndGlobalSection
 EndGlobal
