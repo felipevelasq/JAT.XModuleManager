@@ -4,8 +4,6 @@
     <PackageReference Include="MediatR" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\JAT.Core.Application\JAT.Core.Application.csproj" />
-    <ProjectReference Include="..\JAT.IdentityService.Domain\JAT.IdentityService.Domain.csproj" />
+    <ProjectReference Include="..\JAT.Core.Domain\JAT.Core.Domain.csproj" />
   </ItemGroup>
-
 </Project>
