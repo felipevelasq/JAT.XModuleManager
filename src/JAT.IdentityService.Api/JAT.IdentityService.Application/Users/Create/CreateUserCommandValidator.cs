@@ -14,7 +14,7 @@ public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
 
     private void AddRuleForPasswordHash()
     {
-        RuleFor(x => x.PasswordHash)
+        RuleFor(x => x.Password)
             .NotEmpty()
             .WithMessage("Password is required")
             .MaximumLength(MaxLengths.User.PasswordHash)

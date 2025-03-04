@@ -11,5 +11,5 @@ public interface IRepository<TEntity> : IDisposable where TEntity : Entity
     Task<TEntity?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     IQueryable<TEntity> GetAllAsync();
     Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
-    Task<bool> ExistAsync(Guid id, CancellationToken cancellationToken = default);
+    Task<bool> ExistAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
 }

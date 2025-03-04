@@ -1,4 +1,4 @@
-using JAT.IdentityService.Domain;
+using JAT.IdentityService.Domain.Users;
 using JAT.IdentityService.Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
 

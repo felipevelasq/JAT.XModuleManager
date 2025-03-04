@@ -52,6 +52,6 @@ public class UsersController(IMediator mediator) : ApiController
     private static CreateUserCommand MapToCreateUserCommand(CreateUserRequest request)
     {
         ArgumentNullException.ThrowIfNull(request);
-        return new (request.Username, request.Email, request.PasswordHash);
+        return new (request.Username, request.Email, request.Password);
     }
 }
