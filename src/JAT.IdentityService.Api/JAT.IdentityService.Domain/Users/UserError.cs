@@ -8,4 +8,8 @@ public static class UserError
         code: nameof(UserAlreadyExists),
         message: "User already exists"
     );
+    public static Error UserCouldNotBeCreated => Error.Conflict(
+        code: nameof(UserCouldNotBeCreated),
+        message: "User could not be created"
+    );
 }

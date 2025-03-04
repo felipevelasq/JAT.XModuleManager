@@ -37,7 +37,7 @@ public class CreateUserCommandHandler(
 
         if (!await _unitOfWork.CommitAsync(cancellationToken))
         {
-            return Error.Conflict("User could not be created");
+            return UserError.UserCouldNotBeCreated;
         }
 
         return MapToCreateUserResult(newUser);
