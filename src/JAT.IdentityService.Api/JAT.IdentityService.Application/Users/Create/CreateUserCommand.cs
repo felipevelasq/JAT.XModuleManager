@@ -6,5 +6,5 @@ namespace JAT.IdentityService.Application.Users.Create;
 public record CreateUserCommand(
     string Username,
     string Email,
-    string PasswordHash)
+    string Password)
  : IRequest<Result<CreateUserResult>>;

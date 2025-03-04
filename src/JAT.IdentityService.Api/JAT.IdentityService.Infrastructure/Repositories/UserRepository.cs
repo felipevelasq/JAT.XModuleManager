@@ -1,5 +1,5 @@
-using JAT.IdentityService.Domain;
 using JAT.IdentityService.Domain.Interfaces.Repositories;
+using JAT.IdentityService.Domain.Users;
 using JAT.IdentityService.Infrastructure.Database;
 
 namespace JAT.IdentityService.Infrastructure.Repositories;

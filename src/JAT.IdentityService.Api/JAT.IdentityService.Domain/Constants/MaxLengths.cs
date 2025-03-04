@@ -8,4 +8,9 @@ public static class MaxLengths
         public const int Email = 100;
         public const int PasswordHash = 100;
     }
+
+    public static class Password
+    {
+        public const int Salt = 16;
+    }
 }

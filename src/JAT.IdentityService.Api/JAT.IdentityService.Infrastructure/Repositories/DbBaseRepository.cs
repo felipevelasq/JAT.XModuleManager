@@ -42,10 +42,10 @@ public class DbBaseRepository<TEntity> : IRepository<TEntity> where TEntity : En
         }
     }
 
-    public async Task<bool> ExistAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task<bool> ExistAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)
     {
         cancellationToken.ThrowIfCancellationRequested();
-        return await DbSet.AnyAsync(entity => entity.Id == id, cancellationToken);
+        return await DbSet.AnyAsync(predicate, cancellationToken);
     }
 
     public IQueryable<TEntity> GetAllAsync()

@@ -1,6 +1,6 @@
 using JAT.Core.Domain.Commons.Results;
-using JAT.IdentityService.Domain;
 using JAT.IdentityService.Domain.Interfaces.Repositories;
+using JAT.IdentityService.Domain.Users;
 using MediatR;
 
 namespace JAT.IdentityService.Application.Users.List;
