@@ -48,9 +48,10 @@ public class DbBaseRepository<TEntity> : IRepository<TEntity> where TEntity : En
         return await DbSet.AnyAsync(predicate, cancellationToken);
     }
 
-    public IQueryable<TEntity> GetAllAsync()
+    public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
     {
-        return DbSet;
+        cancellationToken.ThrowIfCancellationRequested();
+        return await DbSet.ToListAsync(cancellationToken);
     }
 
     public Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)

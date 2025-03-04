@@ -9,7 +9,7 @@ public interface IRepository<TEntity> : IDisposable where TEntity : Entity
     void Update(TEntity entity);
     void Delete(TEntity entity);
     Task<TEntity?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
-    IQueryable<TEntity> GetAllAsync();
+    Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default);
     Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
     Task<bool> ExistAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
 }

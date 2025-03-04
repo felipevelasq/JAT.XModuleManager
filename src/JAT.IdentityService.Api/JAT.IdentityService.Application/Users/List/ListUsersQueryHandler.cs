@@ -5,16 +5,22 @@ using MediatR;
 
 namespace JAT.IdentityService.Application.Users.List;
 
-public class ListUsersHandler(IUserRepository userRepository)
+public class ListUsersQueryHandler(IUserRepository userRepository)
     : IRequestHandler<ListUsersQuery, Result<IEnumerable<UserDTO>>>
 {
     private readonly IUserRepository _userRepository = userRepository;
 
+    /// <summary>
+    /// Handles the request to list users.
+    /// </summary>
+    /// <param name="request">The request to list users.</param>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <returns>A result containing a list of UserDTOs.</returns>
     public async Task<Result<IEnumerable<UserDTO>>> Handle(ListUsersQuery request, CancellationToken cancellationToken)
     {
-        var users = _userRepository.GetAllAsync();
-        var userDTOs = users.Select(x => MapToDTO(x)).ToArray();
-        return await Task.FromResult(userDTOs);
+        var users = await _userRepository.GetAllAsync(cancellationToken);
+        var userDTOs = users.Select(MapToDTO).ToArray();
+        return userDTOs;
     }
 
     public static UserDTO MapToDTO(User user)
