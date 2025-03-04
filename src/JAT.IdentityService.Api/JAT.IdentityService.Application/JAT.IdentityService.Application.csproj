@@ -2,6 +2,7 @@
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" />
     <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\JAT.Core.Application\JAT.Core.Application.csproj" />

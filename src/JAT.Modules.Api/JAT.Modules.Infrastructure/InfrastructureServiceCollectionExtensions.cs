@@ -23,4 +23,15 @@ public static class InfrastructureServiceCollectionExtensions
         services.AddScoped<IModuleRepository, ModuleRepository>();
         return services;
     }
+
+    public static IServiceProvider ApplyContextUpdates(this IServiceProvider serviceProvider)
+    {
+        // using (var scope = serviceProvider.CreateScope())
+        // {
+        //     var services = scope.ServiceProvider;
+        //     var appDbContext = services.GetRequiredService<IdentityServiceDbContext>();
+        //     appDbContext.EnsureMigrationsApplied();
+        // }
+        return serviceProvider;
+    }
 }

@@ -1,10 +1,8 @@
 using JAT.Core.Domain.Interfaces;
 using JAT.IdentityService.Domain.Interfaces.Repositories;
-using JAT.IdentityService.Domain.Interfaces.Services;
 using JAT.IdentityService.Infrastructure.Database;
 using JAT.IdentityService.Infrastructure.Extensions;
 using JAT.IdentityService.Infrastructure.Repositories;
-using JAT.IdentityService.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,9 +21,6 @@ public static class InfrastructureServiceCollectionExtensions
             });
         
         services.AddScoped<IUnitOfWork, UnitOfWork<IdentityServiceDbContext>>();
-
-        // Services
-        services.AddScoped<IPasswordService, PasswordService>();
 
         // Repositories
         services.AddScoped<IUserRepository, UserRepository>();

@@ -54,9 +54,10 @@ public class DbBaseRepository<TEntity> : IRepository<TEntity> where TEntity : En
         return await DbSet.ToListAsync(cancellationToken);
     }
 
-    public Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        cancellationToken.ThrowIfCancellationRequested();
+        return await DbSet.Where(predicate).ToListAsync(cancellationToken);
     }
 
     public async Task<TEntity?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
