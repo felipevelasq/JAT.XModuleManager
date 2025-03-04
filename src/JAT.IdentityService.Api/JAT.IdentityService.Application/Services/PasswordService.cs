@@ -3,7 +3,7 @@ using JAT.IdentityService.Domain.Constants;
 using JAT.IdentityService.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
-namespace JAT.IdentityService.Infrastructure.Services;
+namespace JAT.IdentityService.Application.Services;
 
 public class PasswordService : IPasswordService
 {

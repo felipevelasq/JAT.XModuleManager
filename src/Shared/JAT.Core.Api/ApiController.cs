@@ -1,10 +1,12 @@
 ﻿using JAT.Core.Domain.Commons.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace JAT.Core.Api;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ApiController : ControllerBase
